@@ -1,0 +1,26 @@
+{% extends "page.html" %}
+{% block content %}
+{% for season in seasonSelect %}
+<table style="margin: auto">
+    <tr>
+        <td colspan="6" style="text-align: center;"><h1>Season {{season.season}}</h1></td>
+    </tr>
+{% endfor %}
+    <tr>
+{% for episode in episodeSelect %}
+        <td><a href="/episode/{{ episode.episode }}">
+        <img src="../../static/{{ episode.thumbnail }}" style="border: none"  height="85" width="150"/></td>
+        {% if forloop.last %}
+            </tr>
+        {% else %}
+        {% if forloop.counter|divisibleby:"6" %}
+            </tr><tr>
+        {% endif %}
+        {% endif %}
+    {% endfor %}
+    <tr>
+        <td>&nbsp;</td>
+    </tr>
+</table>
+
+{% endblock %}

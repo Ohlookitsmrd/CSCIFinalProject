@@ -1,0 +1,29 @@
+<html>
+<head>
+<style type="text/css">
+    #logo {display: block;
+    margin: auto;
+    width: auto;}
+    #logo_container {width: 20%; margin: auto;}
+body { background-image: url("https://wallpaperscraft.com/image/the_office_tv_series_steve_carell_boss_96802_1366x768.jpg"); background-repeat: no-repeat; background-position: right bottom; background-size: cover; background-color: rgb(192, 192, 182);}
+div.main { padding-left: 200px; padding-right: 200px;}
+td { vertical-align: top; }
+h1 { background-color: clear; text-align: center; font-size: 50pt; color: white; }
+
+    td#filterform{border: 1px solid lightgrey;}
+</style>
+</head>
+<body>
+    <table id="logo_container">
+        <tr><td>
+        <a href="/"><img id="logo" src="https://fanart.tv/fanart/tv/73244/clearlogo/the-office-us-502e01c5873e2.png"/></a>
+        </td></tr>
+    </table>
+<div class="main" id="main">
+     
+{% block content %}
+{% endblock %}
+{% csrf_token %}
+</div>
+</body>
+</html>

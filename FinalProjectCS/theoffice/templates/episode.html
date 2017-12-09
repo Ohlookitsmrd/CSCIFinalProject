@@ -1,0 +1,15 @@
+{% extends "page.html" %}
+{% block content %}
+{% for episode in episodeSelect %}
+<table style="margin: auto">
+    <tr>
+        <td colspan="2" style="text-align: center;"><h1>{{episode.episode}}</h1></td>
+    </tr>
+    <tr>
+        <td style="padding-right: 50px;"><img src="../../static/{{ episode.thumbnail }}" style="border: 2px solid rgb(82, 71, 89);" height="128" width="225"/></td>
+        <td style="text-align: center; ">
+            <span style="font-size: 20pt; background-color:azure">{{episode.description}}</span></td>
+    </tr>
+</table>
+{% endfor %}
+{% endblock %}

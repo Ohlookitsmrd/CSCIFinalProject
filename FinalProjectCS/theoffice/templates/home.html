@@ -1,0 +1,29 @@
+<style>
+    a:link {color: white}
+    a:visited {color: white}
+    a:hover {color: aqua}
+    a {text-decoration: none}
+</style>
+{% extends "base.html" %} 
+{% block season %} 
+    <tr>
+    {% for season in season %}
+    <td style="text-align: center; padding-top: 25px;">
+        <a href="season/{{ season.season }}">
+        <span style="font-size: 16pt;">Season {{ season.season }}</span></a>
+        </td>
+        {% if forloop.last %}
+            </tr>
+        {% else %}
+        {% if forloop.counter|divisibleby:"3" %}
+            </tr><tr>
+        {% endif %}
+        {% endif %}
+    {% endfor %} 
+{% endblock %}
+{% block character %}
+<tr>
+    <td colspan="3"style="text-align: center; padding-top: 25px;">
+        <a href="character">
+        <span style="font-size: 24pt;">Characters       
+{% endblock %}                                
